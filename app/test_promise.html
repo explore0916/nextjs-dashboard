@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise 学习</title>
+</head>
+<body>
+    <h1>Test Promise</h1>
+
+    <script>
+        // const obj = {
+        //     name:'张三',
+        //     age:18
+        // }
+        // const p = new Promise(
+        //     (resolve,reject)=>{
+        //         // resolve(obj);
+        //         (
+        //             (value)=>{
+        //                 console.log(value);
+        //             }
+        //         )(123)
+        //     }
+        // );
+        // p.then(
+        //     (res)=>{
+        //         console.log('执行成功的方法',res.name)
+        //     },
+        //     (err)=>{
+        //         console.log('执行失败的方法',err)
+        //     }
+        // );
+
+        console.log("程序开始执行")
+        async function test(){
+            await new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    //reject("抛出异常，执行失败！");
+                    resolve("执行成功！");
+                },3000);
+            });
+           // console.log("程序不可能执行到这")
+            console.log("程序继续往下执行")
+        }
+        test();
+        
+    </script>
+</body>
+</html>
